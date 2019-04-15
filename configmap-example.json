@@ -1,0 +1,11 @@
+{
+    "kind": "ConfigMap",
+    "apiVersion": "v1",
+    "metadata": {
+        "name": "config"
+    },
+    "data": {
+        "message": "This is a greeting that is NOT changed",
+        "ui.properties": "color=lightcyan \nmessage=Hello World  \nEnv=DAT Dev"
+    }
+}

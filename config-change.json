@@ -1,0 +1,12 @@
+{
+    "kind": "ConfigMap",
+    "apiVersion": "v1",
+    "metadata": {
+        "name": "config",
+        "creationTimestamp": null
+    },
+    "data": {
+        "message": "This is a greeting that is NOT changed \n<p>This line has changed </p>\n<p>This line has changed </p>\n<p>This line has changed </p>\n<p>This line has changed </p>\n",
+        "ui.properties": "color=lime \nmessage=Hello Travelport  \nEnv=DAT DEV"
+    }
+}
