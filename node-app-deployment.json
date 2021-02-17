@@ -135,52 +135,6 @@
           }
         }
       }
-    },
-    {
-      "kind": "Service",
-      "apiVersion": "v1",
-      "metadata": {
-        "name": "node-app",
-        "labels": {
-          "app": "node-app"
-        }
-      },
-      "spec": {
-        "ports": [
-          {
-            "name": "8080-tcp",
-            "protocol": "TCP",
-            "port": 8080,
-            "targetPort": 8080
-          }
-        ],
-        "selector": {
-          "app": "node-app",
-          "deploymentconfig": "node-app"
-        },
-        "type": "ClusterIP",
-        "sessionAffinity": "None"
-      }
-    },
-    {
-      "kind": "Route",
-      "apiVersion": "v1",
-      "metadata": {
-        "name": "node-app",
-        "labels": {
-          "app": "node-app"
-        }
-      },
-      "spec": {
-        "host": "",
-        "to": {
-          "kind": "Service",
-          "name": "node-app"
-        },
-        "port": {
-          "targetPort": "8080-tcp"
-        }
-      }
     }
   ]
 }
